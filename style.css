@@ -1,0 +1,224 @@
+:root{
+    --primary-color: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+     --grey-hsl: hsl(231, 7%, 60%);
+      --white-hsl: hsl(0, 0%, 100%);
+}
+@font-face{
+    font-family:'RobotoRegular';
+    src: url('fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('fonts/Roboto-Bold.ttf');
+}
+ html {
+     margin: 0px;
+     padding: 0px;
+     height: 100%;
+     width: 100%;
+ }
+
+ body {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     margin: 0px;
+     padding: 0px;
+ }
+
+/* @media (max-width: 375px) 
+{ */
+    .news-subscribtion-container
+    {
+        width: 375px;
+        background-color: var(--white-hsl);
+        display: flex;
+        flex-direction: column;
+        font-family: RobotoRegular;
+        align-items: center;
+        justify-content: left;
+    }
+ #banner-mobile
+   {
+    display:flex;
+    position: relative;
+     width: 375px;
+    }
+
+ #banner-desktop
+ {
+display: none;
+}
+
+ .info-container {
+    height: 100%;
+     padding: 30px;  
+ }
+
+   #stay-updated
+    {
+    font-family: RobotoBold;
+    font-weight: 700;
+    }
+
+    .circle-checked
+    {
+        display: flex;
+        align-items: flex-start;
+        line-height: 20px;
+        gap:15px;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;      
+    }
+.input-container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+label
+{
+    font-family: RobotoBold;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.has-error-container
+{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 320px;
+    height: fit-content;
+}
+#has-error
+{
+    display: none;
+    color:#FF6742
+}
+[type=email]
+{
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid grey;
+    padding-left: 20px;
+}
+[type=email]:hover,
+[type=email]:focus
+{
+    cursor: pointer;
+}
+[type=email].has-error {
+    border: 1px solid #FF6742;
+    background-color: hsl(13, 45%, 90%);
+}
+[type=email].has-error::placeholder {
+    color:#FF6742;
+}
+.button-submit
+{
+    margin-top: 20px;
+    background: var(--dark-slate-grey) ;
+    color :white!important; 
+    height: 50px;
+    width: 325px;
+    border-radius: 8px;
+}
+.button-submit:hover
+{
+    background-image: linear-gradient(90deg, #FF5274 , #FF6742);
+    outline: none;
+    border: none;
+    cursor: pointer;    
+}
+.button-submit:active
+{
+    box-shadow: 0px 0px 15px 3px #FF6742;
+}
+.attribution
+{
+    height: fit-content;
+    width:100%;
+    text-align: center;
+    font-family: RobotoRegular;
+}
+/* } */
+
+
+
+@media (min-width:376px) and (max-width: 1440px) {
+    body
+    {
+    background-color: var(--dark-slate-grey);
+
+        }
+           .news-subscribtion-container 
+       {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        background-color: var(--white-hsl);
+        height: 500px;
+        width: 800px;
+        margin: 25vh auto;
+        flex-wrap: nowrap;
+        border-radius: 20px;
+       }
+       .info-container
+       {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 350px;
+        height: 430px;
+        /* border: 1px solid red */
+       }
+       .circle-checked
+       {
+           display: flex;
+           align-items: flex-start;
+           line-height: 20px;
+           gap: 15px;
+           width: 100%;
+           height: 50px;
+           font-size: 16px;      
+       }
+       #banner-mobile
+       {
+        pointer-events: none;
+        display: none;
+       }
+       #banner-desktop
+    {
+        display: flex;
+        background-image: url(assets/images/illustration-sign-up-desktop.svg);
+       background-size: cover;
+        width: 360px;
+        height: 450px;
+        border-radius: 20px
+        /* border:1px solid orange; */
+    }
+ #has-error
+ {
+    display:none;
+    text-align: right;
+    color: #FF6742;
+ }
+
+/* [type=email]
+{
+    position: relative;
+} */
+
+/* .button-submit
+{
+    position: relative;   
+} */
+
+}
+
+  
