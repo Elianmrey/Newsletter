@@ -1,14 +1,14 @@
 const button = document.querySelector(".button-submit");
 const form = document.querySelector(".formulary");
-const validRegex = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi;
+const validRegex = /^[\w-_.]+@[\w-_.]+\.[\w]{2,}/gi;
 const email = document.querySelector("#email-to-newsletters");
 const verifyEmail = document.querySelector("#has-error");
-const validEmail = validRegex.test(email.value) === true;
+const validEmail = validRegex.test(email.value);
 button.addEventListener("click", ()=>{
    
     form.addEventListener("submit", (e) => { 
         e.preventDefault();
-        if (!email.value || validEmail)
+        if (!email.value || validEmail === false)
         {
             verifyEmail.style.display = "flex";
             email.classList.add("has-error");
