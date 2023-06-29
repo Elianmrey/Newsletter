@@ -81,16 +81,34 @@ display: none;
 
 label
 {
+    display: flex;
+    width: fit-content;
     font-family: RobotoBold;
     font-weight: 700;
     margin-bottom: 10px;
 }
+.struture-label-span
+{
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    width: 320px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    font-size: 12px;
+    /* border: 1px solid red; */
+    align-items: flex-start;
+    justify-content: space-between;
+}
 .has-error-container
 {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row-reverse;
-    width: 320px;
+    width: 120px;
+    margin-left: 120px;
     height: fit-content;
+    /* border: 1px solid red; */
 }
 #has-error
 {
