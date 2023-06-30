@@ -115,7 +115,7 @@ label
     display: none;
     color:#FF6742
 }
-[type=email]
+.email-input
 {
     width: 300px;
     height: 50px;
