@@ -165,7 +165,37 @@ label
 }
 /* } */
 
-
+.advise-message
+{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 300px ;
+    width: 250px;
+    margin: auto;
+    border-radius: 15px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    font-family: RobotoRegular;
+}
+.icon-success
+{
+    height: 40px;
+    width: 40px;
+    border: 1px solid red;
+}
+.window-title
+{
+    font-size: 34px;
+    font-family: RobotoBold;
+    font-weight: 700;
+}
+.confirmation-message
+{
+    border: 1px solid red;
+}
 
 @media (min-width:376px) and (max-width: 1440px) {
     body
