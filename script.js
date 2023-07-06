@@ -48,5 +48,5 @@ divMessage.display = "flex";
 divMessage.innerHTML = `
 <h2 class ="window-title">${divRefill.title}</h2>
 <p class = "confirmation-message">${divRefill.message}</p>
-<button>Dismiss Message`;
+<button class="button-dismiss">Dismiss Message</button>`;
 
