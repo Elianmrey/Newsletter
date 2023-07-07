@@ -8,6 +8,8 @@ const verifyEmail = document.querySelector("#has-error");
 const validRegex = /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/gim;
 const validValue =  validRegex.test(email.value);
 const emailValue = [];
+
+//Working here
 function subscribeNewEmail() {
          
     emailValue.splice(0,1);
