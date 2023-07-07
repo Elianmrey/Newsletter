@@ -169,23 +169,22 @@ label
 
 .advise-message
 {
-    display: flex;
+    display: none;
+    user-select: none;
     flex-direction: column;
     background-color: white;
     height: 300px ;
     width: 250px;
-    margin: auto;
+    margin: 25vh auto;
     border-radius: 15px;
     padding: 20px;
     justify-content: center;
     align-items: center;
-    /* gap: 10px; */
     font-family: RobotoRegular;
 }
 .svg-container
 {
     display: flex;
-    /* background: url(assets/images/icon-success.svg); */
     background-size: cover;
     height: 40px;
     width: 40px;
@@ -213,7 +212,6 @@ label
     margin: 10px;
     color: gray;
     font-size: 15px;
-    /* border: 1px solid red; */
 }
 
 .button-dismiss {
@@ -295,17 +293,6 @@ label
     text-align: right;
     color: #FF6742;
  }
-
-/* [type=email]
-{
-    position: relative;
-} */
-
-/* .button-submit
-{
-    position: relative;   
-} */
-
 }
 
   

@@ -19,10 +19,11 @@ class SuccessWindow
 }
 }
 
+const successMessage = document.querySelector(".advise-message");
+const subscriptionSection = document.querySelector(".news-subscribtion-container");
 const divRefill = new SuccessWindow(title, message, icon);
-const divMessage = document.querySelector(".advise-message");
-divMessage.display = "flex";
-divMessage.innerHTML = `
+
+successMessage.innerHTML = `
 <div class="svg-container">${divRefill.icon}</div>
 <h2 class ="window-title">${divRefill.title}</h2>
 <p class = "confirmation-message">${divRefill.message}</p>
@@ -45,10 +46,13 @@ button.addEventListener("click", () => {
         console.log("Testando")
     }
     else {
-        console.log("Testando else")
+    
         alert("Email Validated with succes");
         verifyEmail.style.display = "none";
         email.classList.remove("has-error");
+        subscriptionSection.style.display = "none";
+        subscriptionSection.style.userSelect = "none";
+        successMessage.style.display = "flex";
     }
 })
 email.addEventListener("input", ()=>{
@@ -57,4 +61,12 @@ email.addEventListener("input", ()=>{
     email.classList.remove("has-error");
 
 })
+const buttonDismiss = document.querySelector(".button-dismiss");
 
+buttonDismiss.addEventListener("click", () => { 
+
+    subscriptionSection.style.display = "flex";
+    subscriptionSection.style.pointerEvents = "all";
+    subscriptionSection.style.userSelect = "none";
+    successMessage.style.display = "none";
+})
