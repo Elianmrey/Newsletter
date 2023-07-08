@@ -42,11 +42,11 @@ const  icon = `<svg class="icon-success" xmlns="http://www.w3.org/2000/svg" widt
 
     function verificaEmail(){
 
-            subscribeNewEmail();
+           const captureEmail =  subscribeNewEmail();
             const regTest = validRegex.test(email.value);
-            
+            console.log(`Captured `)
          
-            if (email.value ==="" || regTest === false) {
+        if (captureEmail[0] ==="" || regTest === false) {
                 verifyEmail.style.display = "flex";
                 email.classList.add("has-error");
 
@@ -64,19 +64,11 @@ const  icon = `<svg class="icon-success" xmlns="http://www.w3.org/2000/svg" widt
 
 
 button.addEventListener("click", verificaEmail);
-
-
-
 email.addEventListener("input", ()=>{
     verifyEmail.style.display = "none";
     email.classList.remove("has-error");
 
-
 })
-
-
-
-
 
 
 class SuccessWindow
