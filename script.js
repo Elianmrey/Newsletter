@@ -20,11 +20,6 @@ function subscribeNewEmail() {
         return text;
     }; 
 
-  
-
- 
-
-
 const successMessage = document.querySelector(".advise-message");
 const subscriptionSection = document.querySelector(".news-subscribtion-container");
 
