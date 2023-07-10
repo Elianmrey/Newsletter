@@ -4,8 +4,8 @@ const email = document.querySelector("#email-to-newsletters");
 
 const verifyEmail = document.querySelector("#has-error");
 
-
-const validRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/ig;
+const validRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi;
+// const validRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/ig;
 const validValue =  validRegex.test(email.value);
 const emailValue = [];
 
@@ -29,36 +29,38 @@ const divRefill = new SuccessWindow(title, icon);
 
 // Listener do Submit para preventDefault() e validar
 
-    form.addEventListener("submit", (e) => {
+    // form.addEventListener("submit", (e) => {
+       
+    // })
+
+
+    function verificaEmail(e){
         e.preventDefault();
-    })
-
-
-    function verificaEmail(){
-
           
             const regTest = validRegex.test(email.value);
             
          
-            if (email.value ==="" || regTest === false) {
+            if(regTest === false) {
                 verifyEmail.style.display = "flex";
                 email.classList.add("has-error");
 
+                console.log("Testing /\Casa")
+
             }
             else {
-                
+                console.log("Testing /\Habitação")
                 verifyEmail.style.display = "none";
                 email.classList.remove("has-error");
                 subscriptionSection.style.display = "none";
                 subscriptionSection.style.userSelect = "none";
                 successMessage.style.display = "flex"; 
                 
-successMessage.innerHTML = `
-<div class="svg-container">${divRefill.icon}</div>
-<h2 class ="window-title">${divRefill.title}</h2>
-<p class = "confirmation-message"> A confirmation email has sent to <span class="to-email"> ${email.value}</span>. Please open it an click the button inside to confirm your subscription </p>
-<button class="button-dismiss">Dismiss Message</button>`;
-        const buttonDismiss = document.querySelector(".button-dismiss");
+            successMessage.innerHTML = `
+                <div class="svg-container">${divRefill.icon}</div>
+                <h2 class ="window-title">${divRefill.title}</h2>
+                <p class = "confirmation-message"> A confirmation email has sent to <span class="to-email">${email.value}</span>. Please open it an click the button inside to confirm your subscription </p>
+                <button class="button-dismiss">Dismiss Message</button>`;
+const buttonDismiss = document.querySelector(".button-dismiss");
 
 buttonDismiss.addEventListener("click", () => { 
 
