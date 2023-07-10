@@ -28,8 +28,6 @@
      padding: 0px;
  }
 
-/* @media (max-width: 375px) 
-{ */
     .news-subscribtion-container
     {
         width: 375px;
@@ -96,7 +94,6 @@ label
     flex-wrap: wrap;
     margin-bottom: 10px;
     font-size: 12px;
-    /* border: 1px solid red; */
     align-items: flex-start;
     justify-content: space-between;
 }
@@ -108,7 +105,6 @@ label
     width: 120px;
     margin-left: 120px;
     height: fit-content;
-    /* border: 1px solid red; */
 }
 #has-error
 {
@@ -157,8 +153,6 @@ label
 {
     box-shadow: 0px 5px 20px 0px #FF6742;
 }
-
-/* } */
 
 .advise-message
 {
@@ -231,6 +225,8 @@ label
     box-shadow: 0px 5px 20px 0px #FF6742;
 }
 
+
+
 .attribution
 {
     height: fit-content;
@@ -248,6 +244,80 @@ a:visited
 {
     color: white;
 }
+
+/*Working Here=====================================================================*/
+.advise-message
+{
+    display: none;
+    user-select: none;
+    flex-direction: column;
+    background-color: white;
+    height: 300px ;
+    width: 250px;
+    margin: auto;
+    border-radius: 15px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: RobotoRegular;
+    
+}
+.svg-container
+{
+    display: flex;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.icon-success
+{
+    background-image: linear-gradient(45deg, #FF5A67, #FF654A);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.window-title
+{
+    margin: 0px;
+    font-size: 34px;
+    font-family: RobotoBold;
+    font-weight: 700;
+}
+.confirmation-message
+{
+    margin: 10px;
+    color: gray;
+    font-size: 15px;
+}
+.to-email
+    {
+        font-weight: 700;
+    }
+
+.button-dismiss {
+    margin-top: 20px;
+    background: var(--dark-slate-grey);
+    color: white !important;
+    height: 50px;
+    width: 250px;
+    border-radius: 8px;
+}
+
+.button-dismiss:hover {
+    background-image: linear-gradient(90deg, #FF5274, #FF6742);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button-dismiss:active {
+    box-shadow: 0px 5px 20px 0px #FF6742;
+}
+
 @media (min-width:376px) {
     body
     {
@@ -307,6 +377,78 @@ a:visited
     text-align: right;
     color: #FF6742;
  }
+
+ 
+ .advise-message
+{
+    display: none;
+    user-select: none;
+    flex-direction: column;
+    background-color: white;
+    height: 300px ;
+    width: 250px;
+    margin: 25vh auto;
+    border-radius: 15px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: RobotoRegular;
+}
+.svg-container
+{
+    display: flex;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.icon-success
+{
+    background-image: linear-gradient(45deg, #FF5A67, #FF654A);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.window-title
+{
+    margin: 0px;
+    font-size: 34px;
+    font-family: RobotoBold;
+    font-weight: 700;
+}
+.confirmation-message
+{
+    margin: 10px;
+    color: gray;
+    font-size: 15px;
+}
+.to-email
+    {
+        font-weight: 700;
+    }
+
+.button-dismiss {
+    margin-top: 20px;
+    background: var(--dark-slate-grey);
+    color: white !important;
+    height: 50px;
+    width: 250px;
+    border-radius: 8px;
+}
+
+.button-dismiss:hover {
+    background-image: linear-gradient(90deg, #FF5274, #FF6742);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button-dismiss:active {
+    box-shadow: 0px 5px 20px 0px #FF6742;
+}
 }
 
   

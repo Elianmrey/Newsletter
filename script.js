@@ -5,11 +5,8 @@ const email = document.querySelector("#email-to-newsletters");
 const verifyEmail = document.querySelector("#has-error");
 
 const validRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi;
-// const validRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/ig;
-const validValue =  validRegex.test(email.value);
-const emailValue = [];
 
-//Working here
+const validValue =  validRegex.test(email.value);
 const successMessage = document.querySelector(".advise-message");
 const subscriptionSection = document.querySelector(".news-subscribtion-container");
 const title = `Thanks for Subscribing`
@@ -28,10 +25,6 @@ const divRefill = new SuccessWindow(title, icon);
 
 
 // Listener do Submit para preventDefault() e validar
-
-    // form.addEventListener("submit", (e) => {
-       
-    // })
 
 
     function verificaEmail(e){
@@ -60,15 +53,15 @@ const divRefill = new SuccessWindow(title, icon);
                 <h2 class ="window-title">${divRefill.title}</h2>
                 <p class = "confirmation-message"> A confirmation email has sent to <span class="to-email">${email.value}</span>. Please open it an click the button inside to confirm your subscription </p>
                 <button class="button-dismiss">Dismiss Message</button>`;
-const buttonDismiss = document.querySelector(".button-dismiss");
+            const buttonDismiss = document.querySelector(".button-dismiss");
 
-buttonDismiss.addEventListener("click", () => { 
+        buttonDismiss.addEventListener("click", () => { 
 
-    subscriptionSection.style.display = "flex";
-    subscriptionSection.style.pointerEvents = "all";
-    subscriptionSection.style.userSelect = "none";
-    successMessage.style.display = "none";
-     email.value = "";
+                subscriptionSection.style.display = "flex";
+                subscriptionSection.style.pointerEvents = "all";
+                subscriptionSection.style.userSelect = "none";
+                successMessage.style.display = "none";
+                email.value = "";
 });
 }
     }
